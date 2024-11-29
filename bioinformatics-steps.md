@@ -129,11 +129,11 @@ wget 'https://zenodo.org/records/14229558/files/s188.STL.V01_1.4d_R2.fastq.gz?do
 Assemble with MEGAHIT.
 
 ```bash
-conda install bioconda::megahit
+conda install -c bioconda -c conda-forge megahit
 ```
 
 ```bash
-megahit -1 s188.STL.V01_1.4d_R1.fastq.gz -2 s188.STL.V01_1.4d_R2.fastq.gz -o megahit_out
+megahit -1 s188.STL.V01_1.4d_R1.fastq.gz -2 s188.STL.V01_1.4d_R2.fastq.gz -o megahit_s188
 ```
 
 Annotate with Prokka.
