@@ -145,6 +145,24 @@ Annotate with Prokka.
 prokka megahit_s188/final.contigs.fa --outdir prokka_s188
 ```
 
+Characterize taxonomy with Sourmash.
+
+```bash
+conda install -c bioconda -c conda-forge sourmash
+```
+
+```bash
+wget 'https://osf.io/4f8n3/download' -O genbank-k31.lca.json.gz
+```
+
+```bash
+sourmash sketch dna -p scaled=10000,k=31,abund s188.STL.V01_1.4d_R1.fastq.gz --name-from-first
+```
+
+```bash
+sourmash gather -k 31 s188.STL.V01_1.4d_R1.fastq.gz.sig genbank-k31.lca.json.gz
+```
+
 This sample will contain E. coli, but not the same E. coli that was
 assembled in isolation.
 
