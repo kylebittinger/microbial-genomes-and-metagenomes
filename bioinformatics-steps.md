@@ -61,19 +61,21 @@ rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
 
 ## 1. Microbial sequence reads (Kyle)
 
-Each student will be assigned a sequence read. We’ll go over what a sequence
-read looks like and how the data was generated. Students will take their
-sequence read and BLAST it at NCBI. All the sequence reads will be from
-different genes within an E. coli genome, but the students won’t know that yet.
+Each student will be assigned a sequence read. We’ll go over what a
+sequence read looks like and how the data was generated. Students will
+take their sequence read and BLAST it at NCBI. All the sequence reads
+will be from different genes within an E. coli genome, but the
+students won’t know that yet.
 
-With audience participation, we’ll discuss each gene and learn about its role.
-I plan to have housekeeping genes, something from the lac operon, something
-related to oxygen stress, and one unknown hypothetical protein.
+With audience participation, we’ll discuss each gene and learn about
+its role.  I plan to have housekeeping genes, something from the lac
+operon, something related to oxygen stress, and one unknown
+hypothetical protein.
 
 ## 2. Assemble a microbial genome (Ahmed)
 
-We'll download our data files from Zenodo, a site for depositing scientific
-data.
+We'll download our data files from Zenodo, a site for depositing
+scientific data.
 
 Download sequence data for a microbial genome.
 
@@ -111,15 +113,16 @@ conda install -c bioconda -c conda-forge prokka
 prokka spades_marc/contigs.fasta --outdir prokka_marc
 ```
 
-Tour of output files. Discuss genome size, GC content, total number of genes,
-rRNA genes, etc.
+Tour of output files. Discuss genome size, GC content, total number of
+genes, rRNA genes, etc.
 
-Find the genes in the E. coli genome that contain the student-assigned reads.
+Find the genes in the E. coli genome that contain the student-assigned
+reads.
 
 ## 3. Metagenome analysis (Kyle)
 
-Download a human-filtered FASTQ file from infant feces collected hours after
-birth.
+Download a human-filtered FASTQ file from infant feces collected hours
+after birth.
 
 ```bash
 wget 'https://zenodo.org/records/14229558/files/s188.STL.V01_1.4d_R1.fastq.gz?download=1' -O s188.STL.V01_1.4d_R1.fastq.gz
@@ -142,19 +145,19 @@ Annotate with Prokka.
 prokka megahit_out/final.contigs.fa --outdir prokka_s188
 ```
 
-This sample will contain E. coli, but not the same E. coli that was assembled
-in isolation.
+This sample will contain E. coli, but not the same E. coli that was
+assembled in isolation.
 
-Find homologs of genes that were in the isolated E. coli genome and discuss the
-accessory genome of E. coli.
+Find homologs of genes that were in the isolated E. coli genome and
+discuss the accessory genome of E. coli.
 
 ## 4. Exploring MicrobiomeDB (Dan)
 
-Download a table of taxonomic abundances from the infant study and import them
-into MicrobiomeDB.
+Download a table of taxonomic abundances from the infant study and
+import them into MicrobiomeDB.
 
 Students will see how the infant gut microbiome compares to adult gut
-microbiome, other human body sites, and the universe of microbiomes in the
-database. It would be great if we could circle back to E. coli somehow at the
-very end, maybe by summarizing E. coli abundance across human body sites and
-other sample types.
+microbiome, other human body sites, and the universe of microbiomes in
+the database. It would be great if we could circle back to E. coli
+somehow at the very end, maybe by summarizing E. coli abundance across
+human body sites and other sample types.
