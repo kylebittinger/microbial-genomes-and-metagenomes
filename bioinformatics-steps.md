@@ -142,7 +142,7 @@ megahit -1 s188.STL.V01_1.4d_R1.fastq.gz -2 s188.STL.V01_1.4d_R2.fastq.gz -o meg
 Annotate with Prokka.
 
 ```bash
-prokka megahit_out/final.contigs.fa --outdir prokka_s188
+prokka megahit_s188/final.contigs.fa --outdir prokka_s188
 ```
 
 This sample will contain E. coli, but not the same E. coli that was
