@@ -1,5 +1,5 @@
 # Microbial Genomes and Metagenomes Workshop
 
 * Steps for [bioinformatics processing](bioinformatics-steps.md)
-* Kyle's presentation: TBD
+* [Workshop slides](https://docs.google.com/presentation/d/1UWdeYKB-NDB8VHOm3zWYnmKBbQf1_kjs3L1XGZWekFk/edit?usp=sharing)
 
