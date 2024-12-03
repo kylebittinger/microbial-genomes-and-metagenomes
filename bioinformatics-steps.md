@@ -138,7 +138,7 @@ prokka spades_marc/contigs.fasta --outdir prokka_marc --prefix marc.2536
 Tour of output files. Discuss genome size, GC content, total number of
 genes, rRNA genes, etc.
 
-Find the gene in the E. coli genome that contains the example read.
+Find the gene in the genome that contains the example read.
 
 ```bash
 nano example_read.fasta
@@ -226,11 +226,9 @@ sourmash sketch dna -p scaled=10000,k=31,abund s188.STL.V01_1.4d_R1.fastq.gz --n
 sourmash gather -k 31 s188.STL.V01_1.4d_R1.fastq.gz.sig genbank-k31.lca.json.gz
 ```
 
-This sample will contain E. coli, but not the same E. coli that was
-assembled in isolation.
-
-Find homologs of genes that were in the isolated E. coli genome and
-discuss the accessory genome of E. coli.
+This sample contains a representative of the same species we assembled
+in the morning session. Find matches for the example genes in the
+isolated organism.
 
 Search using the nucleotide sequence.
 
