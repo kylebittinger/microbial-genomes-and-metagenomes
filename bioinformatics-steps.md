@@ -147,7 +147,7 @@ nano example_gene.ffn
 
 ```bash
 less prokka_marc/marc.2536.faa
-# Copy the nucleotide sequence to the clipboard
+# Copy the protein sequence to the clipboard
 ```
 
 ```bash
