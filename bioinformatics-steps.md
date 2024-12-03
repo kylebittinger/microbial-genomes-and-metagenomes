@@ -109,7 +109,7 @@ wget 'https://zenodo.org/records/14229558/files/marc.2536_2.fastq.gz?download=1'
 Check out a FASTQ file.
 
 ```bash
-zless marc.bacteremia.2536_1.fastq.gz
+zless marc.2536_1.fastq.gz
 # Hit q to quit
 ```
 
