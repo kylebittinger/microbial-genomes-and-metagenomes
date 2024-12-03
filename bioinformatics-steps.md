@@ -110,14 +110,51 @@ conda install -c bioconda -c conda-forge prokka
 ```
 
 ```bash
-prokka spades_marc/contigs.fasta --outdir prokka_marc
+prokka spades_marc/contigs.fasta --outdir prokka_marc --prefix marc.2536
 ```
 
 Tour of output files. Discuss genome size, GC content, total number of
 genes, rRNA genes, etc.
 
-Find the genes in the E. coli genome that contain the student-assigned
-reads.
+Find the gene in the E. coli genome that contains the example read.
+
+```bash
+nano example_read.fasta
+# Paste in your seqeunce read
+# Control-x to exit
+```
+
+```bash
+makeblastdb -dbtype nucl -in prokka_marc/marc.2536.ffn
+```
+
+```bash
+blastn -query example_read.fasta -db prokka_marc/marc.2536.ffn -outfmt 7
+```
+
+Save the nucleotide and protein sequence of the matching gene.
+
+```bash
+less prokka_marc/marc.2536.ffn
+# Copy the nucleotide sequence to the clipboard
+```
+
+```bash
+nano example_gene.ffn
+# Paste in the nucleotide sequence
+# Control-x to exit
+```
+
+```bash
+less prokka_marc/marc.2536.faa
+# Copy the nucleotide sequence to the clipboard
+```
+
+```bash
+nano example_gene.faa
+# Paste in the protein sequence
+# Control-x to exit
+```
 
 ## 3. Metagenome analysis (Kyle)
 
@@ -142,7 +179,11 @@ megahit -1 s188.STL.V01_1.4d_R1.fastq.gz -2 s188.STL.V01_1.4d_R2.fastq.gz -o meg
 Annotate with Prokka.
 
 ```bash
-prokka megahit_s188/final.contigs.fa --outdir prokka_s188
+prokka megahit_s188/final.contigs.fa --outdir prokka_s188 --prefix s188.STL.V01
+```
+
+```bash
+less prokka_s188/s188.STL.V01.tsv
 ```
 
 Characterize taxonomy with Sourmash.
@@ -168,6 +209,26 @@ assembled in isolation.
 
 Find homologs of genes that were in the isolated E. coli genome and
 discuss the accessory genome of E. coli.
+
+Search using the nucleotide sequence.
+
+```bash
+makeblastdb -dbtype nucl -in prokka_s188/s188.STL.V01.ffn
+```
+
+```bash
+blastn -query example_gene.ffn -db prokka_s188/s188.STL.V01.ffn -outfmt 7
+```
+
+Search using the protein sequence.
+
+```bash
+makeblastdb -dbtype prot -in prokka_s188/s188.STL.V01.faa
+```
+
+```bash
+blastp -query example_gene.faa -db prokka_s188/s188.STL.V01.faa -outfmt 7
+```
 
 ## 4. Exploring MicrobiomeDB (Dan)
 
