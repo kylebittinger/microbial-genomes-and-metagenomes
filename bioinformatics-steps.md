@@ -117,6 +117,7 @@ Assemble the genome with Spades.
 
 ```bash
 conda install -c bioconda -c conda-forge spades
+# Hit return to confirm the installation
 ```
 
 ```bash
@@ -129,6 +130,7 @@ Annotate with Prokka.
 
 ```bash
 conda install -c bioconda -c conda-forge prokka
+# Hit return to confirm the installation
 ```
 
 ```bash
@@ -158,6 +160,7 @@ Save the nucleotide and protein sequence of the matching gene.
 
 ```bash
 less prokka_marc/marc.2536.ffn
+# Search by typing / and the gene name
 # Copy the nucleotide sequence to the clipboard
 ```
 
@@ -169,6 +172,7 @@ nano example_gene.ffn
 
 ```bash
 less prokka_marc/marc.2536.faa
+# Search by typing / and the gene name
 # Copy the protein sequence to the clipboard
 ```
 
@@ -192,6 +196,7 @@ Assemble with MEGAHIT.
 
 ```bash
 conda install -c bioconda -c conda-forge megahit
+# Hit return to confirm the installation
 ```
 
 ```bash
@@ -212,6 +217,7 @@ Characterize taxonomy with Sourmash.
 
 ```bash
 conda install -c bioconda -c conda-forge sourmash
+# Hit return to confirm the installation
 ```
 
 ```bash
@@ -259,3 +265,5 @@ Import the BIOM file into MicrobiomeDB.
 
 Compare sourmash results with abundances in BIOM file. Compare birth
 and one month time points.
+
+**Please remember to shut down your Google Cloud instance!**
