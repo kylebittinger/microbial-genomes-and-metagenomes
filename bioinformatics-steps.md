@@ -56,7 +56,7 @@ successful.
 Clean up.
 
 ```bash
-rm Miniconda3-py311_23.10.0-1-Linux-x86_64.sh
+rm Miniconda3-latest-Linux-x86_64.sh
 ```
 
 ## 1. Microbial sequence reads (Kyle)
