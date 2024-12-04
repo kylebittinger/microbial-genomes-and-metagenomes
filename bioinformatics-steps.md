@@ -252,11 +252,10 @@ blastp -query example_gene.faa -db prokka_s188/s188.STL.V01.faa -outfmt 7
 
 ## 4. Exploring MicrobiomeDB (Dan)
 
-Download a table of taxonomic abundances from the infant study and
-import them into MicrobiomeDB.
+Download a table of taxonomic abundances from the infant study
+[here](igram_birth_1m.biom).
 
-Students will see how the infant gut microbiome compares to adult gut
-microbiome, other human body sites, and the universe of microbiomes in
-the database. It would be great if we could circle back to E. coli
-somehow at the very end, maybe by summarizing E. coli abundance across
-human body sites and other sample types.
+Import the BIOM file into MicrobiomeDB.
+
+Compare sourmash results with abundances in BIOM file. Compare birth
+and one month time points.
